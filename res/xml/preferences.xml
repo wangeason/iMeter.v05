@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This is a primitive example showing the different types of preferences available. -->
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        	android:key="serverconfig"
+            android:title="Server Configuration">
+  		<EditTextPreference android:title="@string/serverip" 
+  		    android:key="serverip"></EditTextPreference>
+
+  		<EditTextPreference android:title="@string/serverport"
+  		    android:key="serverport"></EditTextPreference>
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="User Configuration" android:key="userconfig">
+
+  		<EditTextPreference android:title="@string/titleUsername"
+     		android:key="username"></EditTextPreference>
+
+  		<EditTextPreference android:title="@string/titlePassword"
+		    android:password="true" 
+		    android:key="password"></EditTextPreference>
+
+  		<CheckBoxPreference android:title="@string/savePassword"
+			android:key="savepassword"
+		    android:defaultValue="true"/>
+ 	</PreferenceCategory>
+ 	
+    <PreferenceCategory
+            android:title="Upload Configuration" android:key="uploadconfig">  		
+        <CheckBoxPreference
+                android:key="uploadphotoes"
+                android:title="@string/uploadphotos"
+                android:defaultValue="false"
+                />
+    </PreferenceCategory>
+    <PreferenceCategory
+            android:title="Version" android:key="version">  		
+        <Preference
+                android:key="current_version"
+                android:title="Current Version"
+                />
+        <Preference
+                android:key="newest_version"
+                android:title="Newest Version"
+                />
+        <CheckBoxPreference
+                android:key="auto_upgrade_parent_checkbox"
+                android:title="@string/autoupgrade"
+                android:defaultValue="true"
+                />
+
+        <!-- The visual style of a child is defined by this styled theme attribute. -->
+        <CheckBoxPreference
+                android:key="wifi_upgrade_child_checkbox"
+                android:dependency="auto_upgrade_parent_checkbox"
+                android:layout="?android:attr/preferenceLayoutChild"
+                android:title="@string/onlywifi"
+                android:defaultValue="true"
+                />
+    </PreferenceCategory>
+    
+    
+
+</PreferenceScreen>

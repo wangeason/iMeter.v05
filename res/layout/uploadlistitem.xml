@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:gravity="center_vertical">
+    
+    <CheckBox
+        android:id="@+id/meternumbercheck"
+        android:layout_weight="0.55"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+		android:checked="false"
+		android:clickable="false"
+        android:focusable="false"
+        android:textSize="17sp"
+        android:focusableInTouchMode="false" 
+		android:gravity="left|center_vertical"
+		android:textColor="@android:color/black"
+		/>
+
+    
+    	<ImageView 
+	        android:layout_weight="0.15"
+	        android:id="@+id/text_upload"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			/>
+	  	<ImageView 
+	        android:layout_weight="0.15"
+	        android:id="@+id/signature_upload"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			/>
+	  	<ImageView 
+	        android:layout_weight="0.15"
+	        android:id="@+id/photo_upload"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			/>
+
+</LinearLayout>

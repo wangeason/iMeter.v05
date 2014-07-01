@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <TextView
+        android:id="@+id/statistictaskid"
+        android:layout_weight="0.4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:focusableInTouchMode="false" 
+		android:gravity="center_vertical|center_horizontal"
+		android:textColor="@android:color/black"
+		/>
+
+    
+    	<TextView 
+	        android:layout_weight="0.2"
+	        android:id="@+id/succeedrate"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			android:textColor="#0b0"
+			/>
+	  	<TextView 
+	        android:layout_weight="0.2"
+	        android:id="@+id/failedrate"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			android:textColor="#f00"
+			/>
+	  	<TextView 
+	        android:layout_weight="0.2"
+	        android:id="@+id/remainrate"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			android:textColor="@android:color/black"
+			/>
+
+</LinearLayout>

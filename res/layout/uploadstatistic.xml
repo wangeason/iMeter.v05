@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#fff" >
+
+	
+	
+    <LinearLayout  
+  		android:orientation="horizontal"  
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content"
+		android:id="@+id/uploadstatistictitle"
+		android:gravity="center_vertical"
+		>  
+	   	<TextView  
+	   	    android:layout_weight="0.4"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:text="Task ID"
+			android:textSize="16sp"
+			android:textColor="#000"
+			android:gravity="center_horizontal|center_vertical"
+			/>  
+			<!-- 
+	    <ImageView 
+	        android:id="@+id/uploadsucceed"
+	        android:layout_weight="0.2"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			android:src="@drawable/check"
+			/>
+	  	<ImageView 
+	  	    android:id="@+id/uploadfailed"
+	        android:layout_weight="0.2"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			android:src="@drawable/cross"
+			/>
+	  	
+	  	<ImageView 
+	        android:id="@+id/uploadremained"
+	        android:layout_weight="0.2"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:gravity="center_horizontal|center_vertical"
+			android:src="@drawable/warning"
+			/>
+	      -->
+	    <TextView 
+	        android:id="@+id/uploadsucceed"
+	        android:layout_weight="0.2"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="10dp"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content" 
+			android:text="Succeed"
+			android:textColor="#0b0" 
+			android:gravity="center_horizontal|center_vertical"/>
+	    <TextView 
+	        android:id="@+id/uploadremained"
+	        android:layout_weight="0.2"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="10dp"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:text="Failed"
+			android:textColor="#f00"
+			android:gravity="center_horizontal|center_vertical"/>
+	    <TextView 
+	        android:id="@+id/uploadremained"
+	        android:layout_weight="0.2"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="10dp"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:text="Remains"
+			android:textColor="#000"
+			android:gravity="center_horizontal|center_vertical"/>
+	</LinearLayout>  
+
+
+    <ListView
+		android:id="@+id/uploadstatisticlistview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/uploadstatistictitle"
+        android:scrollbarStyle="outsideOverlay"
+		>
+	</ListView>
+    
+</RelativeLayout>
+

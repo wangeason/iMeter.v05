@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iMeter</string>
+    <string name="action_settings">Settings</string>
+    <string name="logo">Hexing Logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="save_password">Save Password</string>
+    <string name="login">Login</string>
+    <string name="fragment1">Tasks</string>
+    <string name="fragment2">Install</string>
+    <string name="fragment3">Upload</string>
+    <string name="savearchive">Save Archive</string>
+    <string name="gps">GPS</string>
+    <string name="newachive">Renew Archive</string>
+    <string name="cleantasks">Clean Tasks</string>
+    <string name="sdarchives">List Archives</string>
+    <string name="installhelp">Install Help</string>
+    <string name="uploadarchive">Upload Archives</string>
+    <string name="renewmission">Download Tasks</string>
+    <string name="taskstatistic">Task Statistics</string>
+    <string name="resume">Resume</string>
+    <string name="settings">Settings</string>
+    <string name="suggestion">suggestion</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="about">About</string>
+    
+    <!-- Preference -->
+    <string name="titleUsername">Username</string>
+    <string name="titlePassword">Password</string>
+    <string name="savePassword">Save Password</string>
+    <string name="autoupgrade">Auto Upgrade</string>
+    <string name="onlywifi">Upgrade under WIFI</string>
+    <string name="serverip">Server IP</string>
+    <string name="serverport">Server Port</string>
+    <string name="uploadphotos">Upload Photos</string>
+    <string name="callfrom">Call From</string>
+    
+</resources>

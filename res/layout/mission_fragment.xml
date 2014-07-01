@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+    <LinearLayout 
+        android:id="@+id/uploaddate"
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center_vertical">
+    
+	    <LinearLayout 
+		    android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_weight="0.7"
+			android:gravity="top" >
+				<TextView 
+				    android:id="@+id/date"
+				    android:layout_width="wrap_content" 
+	        		android:layout_height="wrap_content"
+				    android:text="Please select the task ID:"
+				    android:textSize="14sp"
+				    android:textColor="#000"/>
+		 		<Spinner 
+		 		    android:id="@+id/datespinner"
+		 		    android:layout_width="match_parent" 
+	        		android:layout_height="wrap_content"
+	        		android:paddingLeft="10dp"
+	        		android:paddingBottom= "8dp"       		
+	        		/>
+		</LinearLayout>
+		
+	    <ProgressBar
+			android:id="@+id/indeterminate"
+			style="?android:attr/progressBarStyle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:layout_weight="0.3"
+			/>
+	    <ImageButton 
+	        android:id="@+id/refresh"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:visibility="visible"
+			android:layout_weight="0.3"
+			android:background="#00000000"
+			android:src="@drawable/refresh"
+	        />
+	
+    </LinearLayout>
+	
+    <LinearLayout  
+  		android:orientation="horizontal"  
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content"
+		android:layout_below="@id/uploaddate"
+		android:id="@+id/uploadlisttitle"
+		android:gravity="center_vertical"
+		>
+	    <TextView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="0dp"
+	    	    android:layout_weight="0.1"
+	    	    android:text=""
+			    android:textSize="14sp"
+			    android:textColor="#000"
+			    android:gravity="center_vertical|center_horizontal"/>
+  		<TextView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="0dp"
+	    	    android:layout_weight="0.4"
+	    	    android:text="Device No."
+			    android:textSize="14sp"
+			    android:textColor="#000"
+			    android:gravity="center_vertical|center_horizontal"/>
+  		<TextView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="0dp"
+	    	    android:layout_weight="0.28"
+	    	    android:text="Type"
+			    android:textSize="14sp"
+			    android:textColor="#000"
+			    android:gravity="center_vertical|center_horizontal"/>
+  		
+   
+	   	<TextView  
+	   	    android:layout_weight="0.22"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"  
+			android:text="Status"
+			android:textSize="14sp"
+			android:textColor="#000"
+			android:gravity="center_horizontal|center_vertical"
+			/>
+	</LinearLayout>
+	<ListView
+		android:id="@+id/missionlistview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/uploadlisttitle"
+        android:scrollbarStyle="outsideOverlay"
+		>
+	</ListView>
+
+</RelativeLayout>

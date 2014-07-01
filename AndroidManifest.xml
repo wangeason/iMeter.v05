@@ -1,0 +1,111 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hexing.imeter"
+    android:versionCode="2"
+    android:versionName="1.0.0.5" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" /> 
+	<!-- 往SDcard中创建与删除的权限 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+	<uses-feature android:name="android.hardware.location" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service android:name="com.hexing.imeter.service.DownloadMissionIntentService" ></service>
+        <service android:name="com.hexing.imeter.service.DownloadAPK" ></service>
+        <service android:name="com.hexing.imeter.service.CheckVersion" ></service>
+        <provider
+            android:name="com.hexing.imeter.utils.TaskProvider"
+            android:authorities="com.hexing.imeter.utils.TaskProvider"
+            android:multiprocess="true" >
+        </provider>
+        <activity
+            android:name="com.hexing.imeter.Login"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Exit" android:theme="@style/MyDialogStyle" />
+        <activity android:name="com.hexing.imeter.MainHexing" android:theme="@style/Theme.Tab"></activity>
+        <activity android:name="ViewPictures" android:theme="@style/MyDialogStyle" />
+        <activity android:name="DelArchive" android:theme="@style/MyDialogStyle" />
+        <activity android:name="InstallHelp" android:screenOrientation="portrait" 
+            android:parentActivityName="MainHexing" android:theme="@style/Theme.Sherlock.Light.DarkActionBar">
+	        <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.hexing.imeter.MainHexing" />
+        </activity>
+        <activity android:name="Preference"
+            android:parentActivityName="MainHexing" 
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar">
+	        <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.hexing.imeter.MainHexing" />
+        </activity>
+        <activity android:name="TaskStatistic" android:screenOrientation="portrait"
+            android:parentActivityName="MainHexing" android:theme="@style/Theme.Sherlock.Light.DarkActionBar">
+	        <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.hexing.imeter.MainHexing" />
+        </activity>
+        <activity android:name="ListArchives" android:screenOrientation="portrait"
+            android:parentActivityName="MainHexing" android:theme="@style/Theme.Sherlock.Light.DarkActionBar">
+	        <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.hexing.imeter.MainHexing" />
+        </activity>
+        <activity
+            android:name="capture.CaptureActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowSoftInputMode="stateAlwaysHidden">>
+            <intent-filter>
+                <!--action android:name="android.intent.action.ArchiveActivity" /-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.hexing.photostore.ImageSwitcher"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation"
+			android:label="@string/app_name"
+            android:clearTaskOnLaunch="true" 
+            android:noHistory="false"
+            android:stateNotNeeded="true">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="image/*" />
+			</intent-filter>
+		</activity>
+    </application>
+
+</manifest>
